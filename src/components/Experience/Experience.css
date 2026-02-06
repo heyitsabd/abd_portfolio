@@ -1,0 +1,134 @@
+.experience-section {
+  padding: 100px 20px;
+  background: linear-gradient(to bottom, #070707, #111);
+  color: white;
+  min-height: 100vh;
+}
+
+/* ---------- Title ---------- */
+.exp-title {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 70px;
+  font-weight: 700;
+
+  background: linear-gradient(45deg, #00d9ff, #7a5cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ---------- Timeline ---------- */
+.timeline {
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(#00d9ff, #7a5cff);
+}
+
+/* ---------- Timeline Item ---------- */
+.timeline-item {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 60px;
+}
+
+/* Timeline Dot */
+.timeline-dot {
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #00d9ff, #7a5cff);
+  box-shadow: 0 0 12px rgba(0, 217, 255, 0.7);
+}
+
+/* ---------- Card ---------- */
+.exp-card {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 25px 30px;
+  border-radius: 14px;
+  backdrop-filter: blur(12px);
+  transition: 0.3s;
+}
+
+.exp-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Company Name */
+.exp-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+/* Role */
+.role {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #00d9ff;
+}
+
+/* Description List */
+.exp-card ul {
+  padding-left: 18px;
+  line-height: 1.8;
+  color: #cfcfcf;
+}
+
+.exp-card li {
+  margin-bottom: 8px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item {
+    padding-left: 45px;
+  }
+
+  .timeline-dot {
+    left: 2px;
+  }
+}
+
+.company-link {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+  position: relative;
+}
+
+.company-link:hover {
+  color: #00d9ff;
+}
+
+/* Animated underline */
+.company-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(45deg, #00d9ff, #7a5cff);
+  transition: width 0.3s ease;
+}
+
+.company-link:hover::after {
+  width: 100%;
+}
+
